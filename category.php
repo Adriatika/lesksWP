@@ -1,6 +1,6 @@
 <?php 
 /*
-Main page of theme @Lesks@
+Category-page of theme @Lesks@
 .....
 Made by Adriatika in 2018 for @PromoGroup Media@
 .....
@@ -67,38 +67,93 @@ $catId = get_queried_object_id();
 						<?php endif; ?>
 						<?php
 					}
-					?>	
-				<h2 class="content__title"><a href="">Лесозаготовка</a></h2>
+					
+					$caty = 1;
+					if($caty!=$catId){
+						$args = array(
+							'cat' =>$caty,
+							'posts_per_page'=>2,
+							'post_type' => 'post',
+							'no_found_rows' => true,
+							'orderby'=>'date',
+							'order'=>'DESC',
+						);
+						$query = new WP_Query($args);
+						if($query->have_posts()){
+						?>
+							<h2 class="content__title">
+								<a href="<?php echo get_category_link($caty)?>"><?php echo get_cat_name($caty);?></a>
+							</h2>
+							<div class="dbmArts">
+						<?php
+							while($query->have_posts()){
+								$query->the_post();
+								?>
+									<a href="<?php the_permalink()?>" class="dbmArts__item">
+										<div class="dbmArts__promo">
+											<h4 class="dbmArts__title">
+												<?php
+												$text= get_the_title();
+												echo kama_excerpt(array('maxchar'=>60, 'text'=>$text))
+												?>
+											</h4>
+											<p class="dbmArts__text"><?php
+												echo kama_excerpt(array('maxchar'=>90));
+											?></p>
+											<span class="dbmArts__date"><?php the_time('j F Y');?></span>
+										</div>
+										<div class="dbmArts__img">
+											<?php the_post_thumbnail();?>
+											<span><?php the_time('j F Y');?></span>
+										</div>	
+									</a>
+								<?php
+							}
+							?>
+							</div>
+							<?php
+						};
+						wp_reset_postdata();
+					};
+					?>
+					<?php
+					$caty='-'.$catId;
+				 $args = array(
+				 	'cat'=>$caty,
+					'posts_per_page' =>2,
+					'no_found_rows' => true,
+					'post_type' => 'post',
+					'orderby' => 'date',
+					'order' => 'DESC'
+				);
+				$query = new WP_Query($args);
+				if($query->have_posts()){
+					?>
+				<h2 class="content__title">Интересно</h2>
 				<div class="dbbArts">
-					<a href="#" class="dbbArts__item" style="background:url('https://picsum.photos/600/400?image=1055')no-repeat 50% 50%; background-size:cover;">
+					<?php
+					while($query->have_posts()){
+						$query->the_post();?>
+						<a href="<?php the_permalink();?>" class="dbbArts__item" style="background:url('<?php the_post_thumbnail_url();?>')no-repeat 50% 50%; background-size:cover;">
 						<div class="dbbArts__cap"></div>
 						<div class="dbbArts__promo">
 							<h3 class="dbbArts__title">
-								Интерактивный диалог алтайских властей и лесохозяйственников властей и лесохозяйственников
+								<?php $headTitle = get_the_title();
+								echo kama_excerpt(array('maxchar'=>80));?>
 							</h3>
-							<p class="dbbArts__text">
-								По сообщению Рослесхоза, решением Арбитражного суда Томской области 12 апреля  расторгнут договор аренды лесного участка с ООО «Конкор» (г. Новосибирск). Лесной участок, по которому расторгнут договор аренды, расположен на территории Чаинского лесничества...
-							</p>
 							<span class="dbbArts__date">
-								30 мая 2018
+								<?php the_time("j F Y"); ?>
 							</span>
 						</div>
 					</a>
-					<a href="#" class="dbbArts__item" style="background:url('https://picsum.photos/600/400?image=1035')no-repeat 50% 50%; background-size:cover;">
-						<div class="dbbArts__cap"></div>
-						<div class="dbbArts__promo" >
-							<h3 class="dbbArts__title">
-								Интерактивный диалог алтайских властей и лесохозяйственников властей и лесохозяйственников
-							</h3>
-							<p class="dbbArts__text">
-								По сообщению Рослесхоза, решением Арбитражного суда Томской области 12 апреля  расторгнут договор...
-							</p>
-							<span class="dbbArts__date">
-								30 мая 2018
-							</span>
-						</div>
-					</a>
-				</div>
+						<?php
+					}
+					?>
+					</div>
+					<?php
+				}
+				wp_reset_postdata();
+				?>
 			</main>
 			<aside class="sidebar">
 				<?php get_template_part('includes/main-sidebar');?>

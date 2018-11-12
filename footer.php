@@ -3,9 +3,9 @@
 			<div class="mainFooter__social">
 				<span class="mainFooter__drt">присоединяйтесь:</span>
 				<div class="mainFooter__socRow">
-					<a href="#" class="mainFooter__socItem" id="fFb"></a>
-					<a href="#" class="mainFooter__socItem" id="fVk"></a>
-					<a href="#" class="mainFooter__socItem" id="fYotb"></a>
+					<a href="https://www.facebook.com/lesks.ru" class="mainFooter__socItem" id="fFb"></a>
+					<a href="https://vk.com/lesks" class="mainFooter__socItem" id="fVk"></a>
+					<a href="https://www.youtube.com/channel/UCULQejj6xoBbhYVev9x2aCw" class="mainFooter__socItem" id="fYotb"></a>
 				</div>
 			</div>
 			<div class="mainFooter__addrBlock">

@@ -34,75 +34,83 @@ get_template_part('header');
 					<?php dynamic_sidebar('events-sidebar');?>
 				</aside>
 				<?php get_template_part('includes/hrBnr');?>
-				<h2 class="content__title"><a href="#">Новости</a></h2>
-				<div class="dbmArts">
-					<a href="#" class="dbmArts__item eventsNews">
+				<?php
+				$caty = 1;
+				 $args = array(
+				 	'cat'=>$caty,
+					'posts_per_page' =>2,
+					'no_found_rows' => true,
+					'post_type' => 'post',
+					'orderby' => 'date',
+					'order' => 'DESC'
+				);
+				$query = new WP_Query($args);
+				if($query->have_posts()){
+					?>
+						<h2 class="content__title">
+							<a href="<?php echo get_category_link($caty)?>"><?php echo get_cat_name($caty);?></a>
+						</h2>
+				<div class="dbbArts">
+					<?php
+					while($query->have_posts()){
+						$query->the_post();?>
+						<a href="<?php the_permalink();?>" class="dbbArts__item" style="background:url('<?php the_post_thumbnail_url();?>')no-repeat 50% 50%; background-size:cover;">
+						<div class="dbbArts__cap"></div>
+						<div class="dbbArts__promo">
+							<h3 class="dbbArts__title">
+								<?php $headTitle = get_the_title();
+								echo kama_excerpt(array('maxchar'=>80));?>
+							</h3>
+							<span class="dbbArts__date">
+								<?php the_time("j F Y"); ?>
+							</span>
+						</div>
+					</a>
+						<?php
+					}
+					?>
+					</div>
+					<?php
+				}
+				wp_reset_postdata();
+				?>
+				<?php
+					$args = array(
+					'cat' => 18,
+					'posts_per_page' =>2,
+					'no_found_rows' => true,
+					'post_type' => 'post',
+					'orderby' => 'date',
+					'order' => 'DESC'
+					);
+					$query = new WP_Query($args);
+					$i=0;
+					if($query->have_posts()){ ?>
+						<h2 class="content__title"><a href="<?php echo get_category_link('18')?>"><?php echo get_cat_name('18');?></a></h2>
+						<div class="dbmArts">		
+						<?php
+							while($query->have_posts()){
+								$query->the_post();
+								$i++;
+						?>
+							<a href="<?php the_permalink();?>" class="dbmArts__item">
 						<div class="dbmArts__promo">
-							<h4 class="dbmArts__title">Гибридный харвестер готовится к выходу на российский рынок</h4>
-							<p class="dbmArts__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus perspiciatis fuga nulla ea, unde ullam commodi voluptatem</p>
-							<span class="dbmArts__date">30 мая 2018</span>
+							<h4 class="dbmArts__title">
+								<?php $titleHead = get_the_title(); echo kama_excerpt(array('maxchar'=>60, 'text'=>$titleHead));?></h4>
+							<p class="dbmArts__text"><?php echo kama_excerpt(array('maxchar'=>120));?></p>
+							<span class="dbmArts__date"><?php the_time("j F Y");?></span>
 						</div>
 						<div class="dbmArts__img">
-							<img src="img/mininews.jpg" alt="мелкая картинка">
-							<span>30 мая 2018</span>
+							<?php the_post_thumbnail();?>
+							<span><?php the_time("j F Y");?></span>
 						</div>	
 					</a>
-					<a href="#" class="dbmArts__item eventsNews">
-						<div class="dbmArts__promo">
-							<h4 class="dbmArts__title">Гибридный харвестер готовится к выходу на российский рынок</h4>
-							<p class="dbmArts__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus perspiciatis fuga nulla ea, unde ullam commodi voluptatem</p>
-							<span class="dbmArts__date">30 мая 2018</span>
-						</div>
-						<div class="dbmArts__img eventsNews">
-							<img src="img/mininews.jpg" alt="мелкая картинка">
-							<span>30 мая 2018</span>
-						</div>
-					</a>
-					<a href="#" class="dbmArts__item eventsNews">
-						<div class="dbmArts__promo">
-							<h4 class="dbmArts__title">Гибридный харвестер готовится к выходу на российский рынок</h4>
-							<p class="dbmArts__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus perspiciatis fuga nulla ea, unde ullam commodi voluptatem</p>
-							<span class="dbmArts__date">30 мая 2018</span>
-						</div>
-						<div class="dbmArts__img">
-							<img src="img/mininews.jpg" alt="мелкая картинка">
-							<span>30 мая 2018</span>
-						</div>
-					</a>
-					<a href="#" class="dbmArts__item eventsNews">
-						<div class="dbmArts__promo">
-							<h4 class="dbmArts__title">Гибридный харвестер готовится к выходу на российский рынок</h4>
-							<p class="dbmArts__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus perspiciatis fuga nulla ea, unde ullam commodi voluptatem</p>
-							<span class="dbmArts__date">30 мая 2018</span>
-						</div>
-						<div class="dbmArts__img">
-							<img src="img/mininews.jpg" alt="мелкая картинка">
-							<span>30 мая 2018</span>
-						</div>
-					</a>
-					<a href="#" class="dbmArts__item eventsNews">
-						<div class="dbmArts__promo">
-							<h4 class="dbmArts__title">Гибридный харвестер готовится к выходу на российский рынок</h4>
-							<p class="dbmArts__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus perspiciatis fuga nulla ea, unde ullam commodi voluptatem</p>
-							<span class="dbmArts__date">30 мая 2018</span>
-						</div>
-						<div class="dbmArts__img">
-							<img src="img/mininews.jpg" alt="мелкая картинка">
-							<span>30 мая 2018</span>
-						</div>
-					</a>
-					<a href="#" class="dbmArts__item eventsNews">
-						<div class="dbmArts__promo">
-							<h4 class="dbmArts__title">Гибридный харвестер готовится к выходу на российский рынок</h4>
-							<p class="dbmArts__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus perspiciatis fuga nulla ea, unde ullam commodi voluptatem</p>
-							<span class="dbmArts__date">30 мая 2018</span>
-						</div>
-						<div class="dbmArts__img">
-							<img src="img/mininews.jpg" alt="мелкая картинка">
-							<span>30 мая 2018</span>
-						</div>
-					</a>
+							<?php }?>	
+
 				</div>
+					<?php }
+					wp_reset_postdata();
+				?>
 			</main>
 
 			<aside class="sidebar">

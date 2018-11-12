@@ -48,6 +48,7 @@ $postId = get_the_ID();
 				</article>
 				<?php
 				get_template_part('includes/hrBnr');
+				$caty = '-'.$category[0]->cat_ID;
 					$args = array(
 						'cat' => $category[0]->cat_ID,
 						'posts_per_page'=>2,
@@ -93,7 +94,7 @@ $postId = get_the_ID();
 					wp_reset_postdata();
 				?>
 				<?php
-				$catId = $category[0]->cat_ID;
+				$catId = '-'.$category[0]->cat_ID;
 				 $args = array(
 				 	'cat'=>$catId,
 					'posts_per_page' =>4,
@@ -107,7 +108,7 @@ $postId = get_the_ID();
 				if($query->have_posts()){
 					?>
 					<h2 class="content__title">
-					<a href="<?php echo get_category_link($catId);?>"><?php echo get_cat_name($catId)?></a>
+						Интересно
 					</h2>
 					<div class="dbbArts">
 						<?php
