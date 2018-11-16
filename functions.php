@@ -3,13 +3,13 @@
 add_action('wp_enqueue_scripts', function(){
 	wp_enqueue_style( 'style', get_stylesheet_uri());
 	wp_enqueue_script('jquery-CDN','https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
-	wp_enqueue_script('myscript', get_template_directory_uri() . '/js/libs.min.js');
-  wp_enqueue_script( 'true_loadmore', get_stylesheet_directory_uri() . '/js/loadmore.js', array('jquery'));
-  wp_enqueue_script( 'up', get_stylesheet_directory_uri() . '/js/up.js');
+	wp_enqueue_script('myscript', get_template_directory_uri() . '/js/libs.min.js', array('jquery'));
+  // wp_enqueue_script( 'true_loadmore', get_stylesheet_directory_uri() . '/js/loadmore.js', array('jquery'));
 });
 /*End STYLES/SCRIPTS*/
 /*Start CUSTOM TITLE-TAG*/
 add_theme_support( 'title-tag');
+add_theme_support( 'post-thumbnails');
 /*End CUSTOM TITLE-TAG*/
 /*Start THEME WIDGETS SUPPORT*/
 add_theme_support( 'widgets');
@@ -321,8 +321,46 @@ function true_load_posts(){
   endif;
   die();
 }
-
 add_action('wp_ajax_loadmore', 'true_load_posts');
 add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
 /*End ASYNC POSTS LOADER*/
+
+/*Start CUSTOM WIDGETS*/
+class AdFox extends WP_Widget{
+    function __construct(){
+       parent::__construct(
+        'adfox',
+        'Adfox баннер 250*450',
+        array('description'=>'Виджет вставки банннера adfox')
+       );
+    }
+    function form($instance){
+      extract($instance);
+      ?> 
+      <p>
+      <label for="<?php echo $this->get_field_id('title');?>">Заголовок(не требуется)</label>
+
+        <input type="text" name="<?php echo $this->get_field_name('title');?>" id="<?php echo $this->get_field_id('title');?>" class="widefat" value="<?php if(isset($title)) echo esc_attr($title);?>">
+       </p>
+        <p>
+          <label for="<?php echo $this->get_field_id('text');?>"> Текст(код баннера)</label>
+          <textarea name="<?php echo $this->get_field_name('text');?>" id="<?php echo $this->get_field_id('text');?>" cols="20" rows="5" class="widefat">
+            <?php if(isset($text))echo esc_attr($text);?>
+          </textarea>
+        </p>
+      <?php
+    }
+
+    function widget($args, $instance){
+      extract($args);
+      extract($instance);
+      $before_widget='<div class="widget foxAdd " >';
+      $after_widget = '</div>';
+    }
+};
+add_action('widgets_init', 'adFoxWidget');
+function adFoxWidget(){
+  register_widget('AdFox');
+}
+/*End CUSTOM WIDGETS*/
 ?>

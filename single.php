@@ -12,8 +12,6 @@ Author https://vk.com/altman8  https://www.facebook.com/Altman8
 get_template_part('header');
 the_post();
 $category = get_the_category(get_the_ID());
-//$category[0]->cat_name;
-//$category[0]->cat_ID;
 $postId = get_the_ID();
 ?>
 	<div class="container">
@@ -46,6 +44,7 @@ $postId = get_the_ID();
 						<?php };?>
 					</footer>
 				</article>
+				
 				<?php
 				get_template_part('includes/hrBnr');
 				$caty = '-'.$category[0]->cat_ID;

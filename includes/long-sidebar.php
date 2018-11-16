@@ -18,7 +18,7 @@
 						<img src="<?php bloginfo('template_url');?>/img/mebel1.jpg" alt="comeAdds" class="foxAdd__img">
 					</a>
 				</div>
-				<div class="widgetBlock textwidget>"
+				<div class="widgetBlock textwidget">
 				<?php dynamic_sidebar('main-panel');?>
 				</div>
 				<div class="foxAdd">
