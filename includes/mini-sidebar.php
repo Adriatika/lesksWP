@@ -13,22 +13,11 @@
 					?>
 					<a href="#" class="events__btn">Календарь выставок</a>	
 				</div>
-				<div class="foxAdd">
-					<a href="#" class="foxAdd__anc" target="_blanc">
-						<img src="<?php bloginfo('template_url');?>/img/mebel1.jpg" alt="comeAdds" class="foxAdd__img">
-					</a>
-				</div>
-				<div class="widgetBlock textwidget>"
 				<?php dynamic_sidebar('main-panel');?>
+				<div class="widgetBlock textwidget">
+				
 				</div>
-				<div class="foxAdd">
-					<a href="#" class="foxAdd__anc" traget="_blanc">
-						<img src="<?php bloginfo('template_url');?>/img/mebel1.jpg" alt="comeAdds" class="foxAdd__img">
-					</a>
-					<a href="" class="foxAdd__anc" traget="_blanc">
-						<img src="<?php bloginfo('template_url');?>/img/mebel1.jpg" alt="comeAdds" class="foxAdd__img">
-					</a>
-				</div>
+				<?php dynamic_sidebar('main-panel2');?>
 				<div class="subscribe">
 					<a href="#" class="subscirbe__imgAnc">
 						<img src="img/mag9.jpg" alt="" class="subscribe__img">

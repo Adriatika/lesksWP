@@ -14,20 +14,13 @@
 					<a href="#" class="events__btn">Календарь выставок</a>	
 				</div>
 				<div class="foxAdd">
-					<a href="#" class="foxAdd__anc" target="_blanc">
-						<img src="<?php bloginfo('template_url');?>/img/mebel1.jpg" alt="comeAdds" class="foxAdd__img">
-					</a>
-				</div>
-				<div class="widgetBlock textwidget">
 				<?php dynamic_sidebar('main-panel');?>
 				</div>
+				<div class="widgetBlock textwidget">
+				<?php dynamic_sidebar('gif-sidebar');?>
+				</div>
 				<div class="foxAdd">
-					<a href="#" class="foxAdd__anc" traget="_blanc">
-						<img src="<?php bloginfo('template_url');?>/img/mebel1.jpg" alt="comeAdds" class="foxAdd__img">
-					</a>
-					<a href="" class="foxAdd__anc" traget="_blanc">
-						<img src="<?php bloginfo('template_url');?>/img/mebel1.jpg" alt="comeAdds" class="foxAdd__img">
-					</a>
+				<?php dynamic_sidebar('main-panel2');?>
 				</div>
 				<div class="newsSidebar">
 					<?php 
