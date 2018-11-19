@@ -11,14 +11,14 @@
 					[/events_list]"
 						);
 					?>
-					<a href="#" class="events__btn">Календарь выставок</a>	
+					<a href="https://lesks.ru/blizhajshie-meroprijatija/" class="events__btn">Календарь выставок</a>	
 				</div>
 				<?php dynamic_sidebar('main-panel');?>
 				<div class="widgetBlock textwidget">
-				
+				<?php dynamic_sidebar('gif-sidebar');?>
 				</div>
 				<?php dynamic_sidebar('main-panel2');?>
-				<div class="subscribe">
+				<!-- <div class="subscribe">
 					<a href="#" class="subscirbe__imgAnc">
 						<img src="img/mag9.jpg" alt="" class="subscribe__img">
 					</a>
@@ -27,3 +27,4 @@
 					<span class="subscribe__miniAppeal">Все самое интересное и актуальное в журнале Леснойкомплекс.рф</span>
 					<a href="#" class="subscribe__anc">подписаться</a>
 				</div>
+ -->

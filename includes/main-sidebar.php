@@ -11,17 +11,17 @@
 					[/events_list]"
 						);
 					?>
-					<a href="#" class="events__btn">Календарь выставок</a>	
+					<a href="https://lesks.ru/blizhajshie-meroprijatija/" class="events__btn">Календарь выставок</a>	
 </div>
 				<div class="widgetMagazine">
 					<h3 class="sidebar__title widget__title widgetMagazine__title">
 						свежий номер
 					</h3>
-					<a href="#" class="widget__anchor" target="_blanc">
-						<img class ="widget__image" src="img/mag9.jpg" alt="журнал">
+					<a href="https://ru.calameo.com/read/003770176b1145a61799d" class="widget__anchor" target="_blanc">
+						<img class ="widget__image" src="<?php bloginfo('template_url');?>/img/new1.jpg" alt="журнал">
 					</a>
-					<a href="#" class="widgetMagazine__anc">Читать онлайн</a>
-					<a href="#" class="widgetMagazine__anc"> Скачать pdf</a>
+					<a href="https://ru.calameo.com/read/003770176b1145a61799d" class="widgetMagazine__anc" target="_blanc">Читать онлайн</a>
+					<a href="https://lesks.ru/wp-content/uploads/Issue/LKS_6_34.pdf" class="widgetMagazine__anc" target="_blanc"> Скачать pdf</a>
 				</div>
 				<div class="foxAdd">
 				<?php dynamic_sidebar('main-panel');?>

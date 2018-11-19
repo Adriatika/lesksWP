@@ -66,11 +66,11 @@ get_template_part('header')?>
 				?>
 				</div>
 				<h2 class="content__title">
-					<a href="<?php echo get_category_link(66);?>"><?php echo get_cat_name(66)?></a>
+					<a href="<?php echo get_category_link(6);?>"><?php echo get_cat_name(6)?></a>
 				</h2>
 				<?php
 				 $args = array(
-					'cat' => 66,
+					'cat' => 6,
 					'posts_per_page' =>2,
 					'no_found_rows' => true,
 					'post_type' => 'post',
@@ -107,7 +107,7 @@ get_template_part('header')?>
 				?>
 				<?php
 					$args = array(
-					'cat' => 18,
+					'cat' => 9,
 					'posts_per_page' =>2,
 					'no_found_rows' => true,
 					'post_type' => 'post',
@@ -117,7 +117,7 @@ get_template_part('header')?>
 					$query = new WP_Query($args);
 					$i=0;
 					if($query->have_posts()){ ?>
-						<h2 class="content__title"><a href="<?php echo get_category_link('18')?>"><?php echo get_cat_name('18');?></a></h2>
+						<h2 class="content__title"><a href="<?php echo get_category_link('9')?>"><?php echo get_cat_name('9');?></a></h2>
 						<div class="dbmArts">		
 						<?php
 							while($query->have_posts()){
@@ -151,7 +151,7 @@ get_template_part('header')?>
 				?>
 				<?php
 				$args = array(
-					'cat'=>405,
+					'cat'=>11,
 					'posts_per_page'=>4,
 					'no_found_rows' => true,
 					'post_type' => 'post',
@@ -162,7 +162,7 @@ get_template_part('header')?>
 				if($query->have_posts()){
 					?>
 					<h2 class="content__title">
-						<a href="<?php echo get_category_link('405')?>"><?php echo get_cat_name('405')?></a>
+						<a href="<?php echo get_category_link('11')?>"><?php echo get_cat_name('11')?></a>
 					</h2>
 					<div class="dbbArts">	
 					<?php
@@ -191,7 +191,7 @@ get_template_part('header')?>
 				?>
 				<?php
 					$args = array(
-					'cat' => 13,
+					'cat' => 10,
 					'posts_per_page' =>2,
 					'no_found_rows' => true,
 					'post_type' => 'post',
@@ -201,7 +201,7 @@ get_template_part('header')?>
 					$query = new WP_Query($args);
 					$i=0;
 					if($query->have_posts()){ ?>
-						<h2 class="content__title"><a href="<?php echo get_category_link('13')?>"><?php echo get_cat_name('13');?></a></h2>
+						<h2 class="content__title"><a href="<?php echo get_category_link('10')?>"><?php echo get_cat_name('10');?></a></h2>
 						<div class="dbmArts">		
 						<?php
 							while($query->have_posts()){
@@ -235,7 +235,7 @@ get_template_part('header')?>
 				?>
 				<?php
 				$args = array(
-					'cat'=>23,
+					'cat'=>12,
 					'posts_per_page'=>4,
 					'no_found_rows' => true,
 					'post_type' => 'post',
@@ -246,7 +246,7 @@ get_template_part('header')?>
 				if($query->have_posts()){
 					?>
 					<h2 class="content__title">
-						<a href="<?php echo get_category_link('23')?>"><?php echo get_cat_name('23')?></a>
+						<a href="<?php echo get_category_link('12')?>"><?php echo get_cat_name('12')?></a>
 					</h2>
 					<div class="dbbArts">	
 					<?php

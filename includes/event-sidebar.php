@@ -1,4 +1,10 @@
-				<div class="newsSidebar">
+				<div class="newsSidebar">	
+				<div class="foxAdd">
+				<?php dynamic_sidebar('main-panel');?>
+				</div>
+				<div class="foxAdd">
+				<?php dynamic_sidebar('main-panel2');?>
+				</div>
 					<?php 
 						$args = array(
 							'cat' => '1',
@@ -39,24 +45,18 @@
 						wp_reset_postdata();
 					?>
 				</div>
-				<div class="foxAdd">
-					<a href="#" class="foxAdd__anc" target="_blanc">
-						<img src="<?php bloginfo('template_url');?>/img/mebel1.jpg" alt="comeAdds" class="foxAdd__img">
-					</a>
-				</div>
-				<div class="widgetBlock textwidget>"
-				<?php dynamic_sidebar('main-panel');?>
-				</div>
-				<div class="foxAdd">
-					<a href="#" class="foxAdd__anc" traget="_blanc">
-						<img src="<?php bloginfo('template_url');?>/img/mebel1.jpg" alt="comeAdds" class="foxAdd__img">
-					</a>
-					<a href="" class="foxAdd__anc" traget="_blanc">
-						<img src="<?php bloginfo('template_url');?>/img/mebel1.jpg" alt="comeAdds" class="foxAdd__img">
-					</a>
-				</div>
 				
-				<div class="subscribe">
+				<div class="widgetMagazine">
+					<h3 class="sidebar__title widget__title widgetMagazine__title">
+						свежий номер
+					</h3>
+					<a href="https://ru.calameo.com/read/003770176b1145a61799d" class="widget__anchor" target="_blanc">
+						<img class ="widget__image" src="<?php bloginfo('template_url');?>/img/new1.jpg" alt="журнал">
+					</a>
+					<a href="https://ru.calameo.com/read/003770176b1145a61799d" class="widgetMagazine__anc" target="_blanc">Читать онлайн</a>
+					<a href="https://lesks.ru/wp-content/uploads/Issue/LKS_6_34.pdf" class="widgetMagazine__anc" target="_blanc"> Скачать pdf</a>
+				</div>
+				<!-- <div class="subscribe">
 					<a href="#" class="subscirbe__imgAnc">
 						<img src="img/mag9.jpg" alt="" class="subscribe__img">
 					</a>
@@ -65,3 +65,4 @@
 					<span class="subscribe__miniAppeal">Все самое интересное и актуальное в журнале Леснойкомплекс.рф</span>
 					<a href="#" class="subscribe__anc">подписаться</a>
 				</div>
+ -->
