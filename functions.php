@@ -411,6 +411,7 @@ function add_new_taxonomies() {
       'show_in_nav_menus' => true,
       'show_ui' => true,
       'show_tagcloud' =>false,
+      'show_in_rest' => true,
       'update_count_callback' => '_update_post_term_count',
       'query_var' => true,
       'rewrite' => array(

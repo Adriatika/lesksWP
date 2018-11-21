@@ -1,10 +1,5 @@
 				<div class="newsSidebar">	
-				<div class="foxAdd">
-				<?php dynamic_sidebar('main-panel');?>
-				</div>
-				<div class="foxAdd">
-				<?php dynamic_sidebar('main-panel2');?>
-				</div>
+				
 					<?php 
 						$args = array(
 							'cat' => '1',
@@ -45,7 +40,12 @@
 						wp_reset_postdata();
 					?>
 				</div>
-				
+				<div class="foxAdd">
+				<?php dynamic_sidebar('main-panel');?>
+				</div>
+				<div class="foxAdd">
+				<?php dynamic_sidebar('main-panel2');?>
+				</div>
 				<div class="widgetMagazine">
 					<h3 class="sidebar__title widget__title widgetMagazine__title">
 						свежий номер

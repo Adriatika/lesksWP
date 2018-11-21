@@ -2,28 +2,18 @@
 <html lang="<?php bloginfo('language');?>">
 <head>
 	<meta charset="<?php bloginfo('charset');?>">
+	<meta property="fb:app_id" content="2005773896303783"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	 <link rel="icon" type="image/png" href="https://lesks.ru/wp-content/uploads/2017/04/favicon3.png">
 	 <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://lesks.ru/wp-content/uploads/2017/04/favicon3.png"/>
 	 <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://lesks.ru/wp-content/uploads/2017/04/favicon3.png"/>
 	 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://lesks.ru/wp-content/uploads/2017/04/favicon3.png"/>
 	 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://lesks.ru/wp-content/uploads/2017/04/favicon3.png"/>
-	 <meta property="fb:app_id" content="2005773896303783"/>
-	 	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?159"></script>
-		<script type="text/javascript">
-		  VK.init({apiId: 6756255, onlyWidgets: true});
-		</script>
+	 <?php if(is_singular()){get_template_part('includes/vkHead');}?>
 	<?php wp_head();?>
 </head>
 <body>
-	<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.2&appId=2005773896303783&autoLogAppEvents=1';
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
+	<?php if(is_singular()){get_template_part('includes/fbHead');};?>
 		
 	<div class="wrapper">
 		<header class="header" id="upAnc">

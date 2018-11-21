@@ -234,8 +234,9 @@ get_template_part('header')?>
 					wp_reset_postdata();
 				?>
 				<?php
+				$caty = 68;
 				$args = array(
-					'cat'=>12,
+					'cat'=>$caty,
 					'posts_per_page'=>4,
 					'no_found_rows' => true,
 					'post_type' => 'post',
@@ -246,7 +247,7 @@ get_template_part('header')?>
 				if($query->have_posts()){
 					?>
 					<h2 class="content__title">
-						<a href="<?php echo get_category_link('12')?>"><?php echo get_cat_name('12')?></a>
+						<a href="<?php echo get_category_link($caty)?>"><?php echo get_cat_name($caty)?></a>
 					</h2>
 					<div class="dbbArts">	
 					<?php

@@ -24,6 +24,14 @@ $postId = get_the_ID();
 						<time class="inform__timeBlock"><?php the_time('j F Y')?></time>
 						<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 					</div>
+					<?php 
+					$size = 'full';
+					$attr = array(
+						'src' => $src,
+						'class' => "aligncenter",
+						'alt' => trim(strip_tags( $wp_postmeta->_wp_attachment_image_alt )),
+					);
+					the_post_thumbnail( $size, $attr ); ?>
 					<?php the_content();?>
 					<div class="share">
 						<?php get_template_part('includes/share');?>
