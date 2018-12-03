@@ -1,3 +1,4 @@
+<a href="#upAnc" class="main__upArrowDouble"></a>
 <a href="#upAnc" class="main__upArrow"></a>
 		<footer class="mainFooter">
 			<div class="mainFooter__social">
