@@ -2,9 +2,8 @@
 /*Start STYLES/SCRIPTS*/
 add_action('wp_enqueue_scripts', function(){
 	wp_enqueue_style( 'style', get_stylesheet_uri());
-	wp_enqueue_script('jquery-CDN','https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
-	wp_enqueue_script('myscript', get_template_directory_uri() . '/js/libs.min.js', array('jquery'));
-  // wp_enqueue_script( 'true_loadmore', get_stylesheet_directory_uri() . '/js/loadmore.js', array('jquery'));
+	wp_enqueue_script('jquery-CDN','https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',array(),false, true);
+	wp_enqueue_script('myscript', get_template_directory_uri() . '/js/libs.min.js', array('jquery'), false, true);
 });
 /*End STYLES/SCRIPTS*/
 /*Start CUSTOM TITLE-TAG*/

@@ -88,8 +88,9 @@ get_template_part('header')?>
 						<div class="dbbArts__cap"></div>
 						<div class="dbbArts__promo">
 							<h3 class="dbbArts__title">
-								<?php $headTitle = get_the_title();
-								echo kama_excerpt(array('maxchar'=>80));?>
+								<?php 
+								$headTitle = get_the_title();
+								echo kama_excerpt(array('maxchar'=>80, 'text'=>$headTitle));?>
 							</h3>
 							<span class="dbbArts__date">
 								<?php the_time("j F Y"); ?>
@@ -127,7 +128,8 @@ get_template_part('header')?>
 							<a href="<?php the_permalink();?>" class="dbmArts__item">
 						<div class="dbmArts__promo">
 							<h4 class="dbmArts__title">
-								<?php $titleHead = get_the_title(); echo kama_excerpt(array('maxchar'=>60, 'text'=>$titleHead));?></h4>
+								<?php $titleHead = get_the_title(); 
+								echo kama_excerpt(array('maxchar'=>60, 'text'=>$titleHead));?></h4>
 							<p class="dbmArts__text"><?php echo kama_excerpt(array('maxchar'=>120));?></p>
 							<span class="dbmArts__date"><?php the_time("j F Y");?></span>
 						</div>
