@@ -27,7 +27,7 @@
 										<h3 class="newsSidebar__title">
 											<?php
 												$text = get_the_title();
-												echo kama_excerpt(array('maxchar'=>60, $text));
+												echo kama_excerpt(array('maxchar'=>60, 'text'=>$text));
 											?>
 										</h3>
 										<p class="newsSidebar__text">
