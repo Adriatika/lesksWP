@@ -69,7 +69,7 @@ get_template_part('header')?>
 					Еще интереснее
 				</h2>
 				<?php
-				$args = array(
+				 $args = array(
 					'posts_per_page' =>14,
 					'no_found_rows' => true,
 					'post_type' => 'post',
@@ -77,7 +77,7 @@ get_template_part('header')?>
 					'orderby' => 'date',
 					'order' => 'DESC'
 				);
-				$iter = 0;
+				 $iter = 0;
 				$query = new WP_Query($args);
 				if($query->have_posts()){
 					while($query->have_posts()){
@@ -87,7 +87,7 @@ get_template_part('header')?>
 						if($iter<=2){
 							if($buff==0 && $iter<2){
 								echo "<div class='dbbArts'>";
-								$buff = 1;
+								$buff =1;
 							}
 						?>
 							<a href="<?php the_permalink();?>" class="dbbArts__item" style="background:url('<?php the_post_thumbnail_url();?>')no-repeat 50% 50%; background-size:cover;">
@@ -110,12 +110,13 @@ get_template_part('header')?>
 								$buff = 0;
 							}
 						}
-						if($iter>2 && $iter<=4){
-							if($boof == 0){
-								echo "<div class='dbmArts'>";
-								$boof = 1;
-							}
-							?>
+					}
+					if($iter>2 && $iter<=4){
+						if($boof == 0){
+							echo "<div class='dbmArts'>";
+							$boof = 1;
+						}
+						?>
 							<a href="<?php the_permalink();?>" class="dbmArts__item">
 								<div class="dbmArts__promo">
 									<h4 class="dbmArts__title">
@@ -143,9 +144,6 @@ get_template_part('header')?>
 						?>
 							<a href="<?php the_permalink();?>" class="dbbArts__item" style="background: url('<?php the_post_thumbnail_url();?>') no-repeat 50% 50%;background-size: cover;">
 								<div class="dbbArts__cap"></div>
-								<span class="dbbArts__caty">
-									<?php $category = get_the_category(); echo $category[0]->cat_name;?>	
-								</span>
 								<div class="dbbArts__promo">
 									<h3 class="dbbArts__title">
 										<?php $titleHead = get_the_title(); 
@@ -164,7 +162,7 @@ get_template_part('header')?>
 					}
 					if($iter >8 && $iter<=10){
 						if($boof == 0){
-							echo "<div class='dbmArts'>";
+							echo "<div class='dbmAtrs'>";
 							$boof = 1;
 						};
 						?>
@@ -181,13 +179,13 @@ get_template_part('header')?>
 							</div>	
 						</a>
 						<?php
-						if($iter == 10){
+						if($iter ==10){
 							echo "</div>";
 							$boof = 0;
 						}
 					}
 					if($iter > 10 && $iter <= 14){
-						if($boof == 0){
+						if($boof = 0){
 							echo "<div class='dbbArts'>";
 							$boof = 1;
 						}
@@ -211,13 +209,7 @@ get_template_part('header')?>
 						}
 					}
 				}
-			}
 				?>
-			<style>
-				.dbmArts, .dbbArts{
-					margin-bottom:4.5em;
-				}
-			</style>
 			</main>
 			<aside class="sidebar">
 				<?php if(is_home()){

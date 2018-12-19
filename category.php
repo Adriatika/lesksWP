@@ -139,7 +139,7 @@ $catId = get_queried_object_id();
 						<div class="dbbArts__promo">
 							<h3 class="dbbArts__title">
 								<?php $headTitle = get_the_title();
-								echo kama_excerpt(array('maxchar'=>80));?>
+								echo kama_excerpt(array('maxchar'=>80, 'text'=>$headTitle));?>
 							</h3>
 							<span class="dbbArts__date">
 								<?php the_time("j F Y"); ?>

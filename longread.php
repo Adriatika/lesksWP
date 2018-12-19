@@ -31,7 +31,7 @@ $postId = get_the_ID();
 						'class' => "aligncenter",
 						'alt' => trim(strip_tags( $wp_postmeta->_wp_attachment_image_alt )),
 					);
-					the_post_thumbnail( $size, $attr ); ?>
+					the_post_thumbnail($size,$attr); ?>
 					<?php the_content();?>
 					<div class="share">
 						<?php get_template_part('includes/share');?>

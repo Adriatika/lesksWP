@@ -12,7 +12,7 @@ $count=0;
 ?>
 		<div class="container">
 			<main class="content">
-				<h2 class="content__title">Ключевое слово  "<?php echo get_queried_object()->name;?>"</h2>
+				<h2 class="content__title">Записи по тэгу  "<?php echo get_queried_object()->name;?>"</h2>
 				<div class="inform">
 							<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				</div>

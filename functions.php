@@ -6,6 +6,7 @@ add_action('wp_enqueue_scripts', function(){
 	wp_enqueue_script('myscript', get_template_directory_uri() . '/js/libs.min.js', array('jquery'), false, true);
 });
 /*End STYLES/SCRIPTS*/
+
 /*Start CUSTOM TITLE-TAG*/
 add_theme_support( 'title-tag');
 add_theme_support( 'post-thumbnails');
