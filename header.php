@@ -30,7 +30,7 @@
 					'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',	
 				));?>
 				<a href="<?php echo home_url();?>" class="mainHeader__logo">
-					<img src="<?php bloginfo('template_url');?>/img/logo2.svg" alt="Леснойкомплекс.рф">
+					<img src="<?php bloginfo('template_url');?>/img/newLogo.svg" alt="Леснойкомплекс.рф">
 				</a>	
 				<div class="mainHeader__social">
 					<input type="checkbox" class="mainHeader__visionForm" id="visionForm">
