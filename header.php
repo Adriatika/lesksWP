@@ -10,6 +10,8 @@
 	 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://lesks.ru/wp-content/uploads/2017/04/favicon3.png"/>
 	 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://lesks.ru/wp-content/uploads/2017/04/favicon3.png"/>
 	 <?php if(is_singular()){get_template_part('includes/vkHead');}?>
+	 <meta name="google-site-verification" content="7YpB8UChl-ZAQvGbw8UG2rLnY_PPvdoC12uEe_ZnlZg" />
+	 <meta name="yandex-verification" content="de8682d57b3e8f58" />
 	<?php wp_head();?>
 </head>
 <body>
