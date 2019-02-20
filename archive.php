@@ -10,9 +10,6 @@ get_template_part('header')?>
 		<div class="container">
 			<main class="content">
 				<h2 class="content__title">Архив журналов</h2>
-				<?php
-					$magazine = get_terms('issue', )
-				?>
 				<div class="archive">
 					<div class="archive__item">
 						<a href="#" class="archive__anc">

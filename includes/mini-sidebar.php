@@ -1,3 +1,4 @@
+				<?php dynamic_sidebar('main-panel');?>
 				<div class="events">
 					<h3 class="sidebar__title events__title">
 						Мероприятия
@@ -13,7 +14,6 @@
 					?>
 					<a href="https://lesks.ru/blizhajshie-meroprijatija/" class="events__btn">Календарь выставок</a>	
 				</div>
-				<?php dynamic_sidebar('main-panel');?>
 				<div class="widgetBlock textwidget">
 				<?php dynamic_sidebar('gif-sidebar');?>
 				</div>

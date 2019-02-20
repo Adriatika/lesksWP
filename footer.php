@@ -32,7 +32,7 @@
 						'depth'           => 0,	
 					));?>
 				<span class="mainFooter__copyright">
-					&copy; 2018-2019 PromoGroup Media
+					&copy; 2012-2019 PromoGroup Media
 				</span>
 			</div>
 		</footer>
@@ -80,4 +80,5 @@
 
 		  gtag('config', 'UA-71308187-1');
 		</script>
+		<script src="//static-login.sendpulse.com/apps/fc3/build/loader.js" sp-form-id="3e44e4b6ab34aa68b0ae34210119b4de2181151ba4b5198a11284b00bb8014d8"></script>
 	<?php wp_footer();?>

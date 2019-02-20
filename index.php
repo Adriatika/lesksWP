@@ -143,9 +143,6 @@ get_template_part('header')?>
 						?>
 							<a href="<?php the_permalink();?>" class="dbbArts__item" style="background: url('<?php the_post_thumbnail_url();?>') no-repeat 50% 50%;background-size: cover;">
 								<div class="dbbArts__cap"></div>
-								<span class="dbbArts__caty">
-									<?php $category = get_the_category(); echo $category[0]->cat_name;?>	
-								</span>
 								<div class="dbbArts__promo">
 									<h3 class="dbbArts__title">
 										<?php $titleHead = get_the_title(); 
